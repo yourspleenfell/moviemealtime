@@ -4,9 +4,58 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel="stylesheet" type="text/css" href="/css/materialize.css">
 		<title>Movie Mealtime</title>
 	</head>
 	<body>
-		<h1>Whooooooo~</h1>
+		<div class="row">
+			<div class="col s12 amber lighten-4">
+				<h1>Header placeholder~</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s3 light-green lighten-3">
+				<div class="card-panel">
+					<p>Testing for test</p>
+				</div>
+				<div class="card-panel">
+					<p>Testing for test</p>
+				</div>
+				<div class="card-panel">
+					<p>Testing for test</p>
+				</div>
+				<div class="card-panel">
+					<p>Testing for test</p>
+				</div>
+				<div class="card-panel">
+					<p>Testing for test</p>
+				</div>
+			</div>
+			<div class="col s9 lime lighten-2">
+				<div class="col s12 yellow lighten-1 card-panel">
+					<p>Testing for test</p>
+					<p>Testing for test</p>
+					<p>Testing for test</p>
+					<p>Testing for test</p>
+					<p>Testing for test</p>
+					<p>Testing for test</p>
+				</div>
+				<div class="col s12 green accent-2 card-panel">
+					<p>Testing for test</p>
+					<p>Testing for test</p>
+					<p>Testing for test</p>
+					<p>Testing for test</p>
+					<p>Testing for test</p>
+					<p>Testing for test</p>
+					<p>Testing for test</p>
+					<p>Testing for test</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 amber lighten-4">
+				<p>Footer placeholder~</p>
+			</div>
+		</div>
 	</body>
 </html>
