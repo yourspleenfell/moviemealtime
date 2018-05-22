@@ -1,5 +1,8 @@
 package com.darbuth.moviemealtime.models;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
 
@@ -71,6 +74,7 @@ public class User {
 	public User(String firstName,
 			String lastName,
 			String email,
+			Date birthday,
 			String password,
 			String passwordConfirmation,
 			List<Role> roles) {
@@ -79,7 +83,7 @@ public class User {
 		this.email = email;
 		this.password = password;
 		this.roles = roles;
-		this.birthday = new Date();
+		this.birthday = birthday;
 	}
 
 	public Long getId() {
@@ -105,6 +109,10 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	
+	public String getFullName() {
+		return firstName + " " + lastName;
+	}
 
 	public String getEmail() {
 		return email;
@@ -120,6 +128,14 @@ public class User {
 
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
+	}
+	
+	public Integer getAge() {
+		Date today = new Date();
+		LocalDate todayDate = today.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		LocalDate birthdayDate = birthday.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		Period age = Period.between(todayDate, birthdayDate);
+		return (Integer) age.getYears();
 	}
 
 	public String getPassword() {
