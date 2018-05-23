@@ -15,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import javax.persistence.JoinColumn;
 
@@ -43,6 +44,7 @@ public class User {
 	private String email;
 	
 	@Column
+	@Past
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date birthday;
 	
