@@ -12,7 +12,7 @@ import com.google.gson.Gson;
 
 @RestController
 @RequestMapping("/recipes")
-public class RecipeController {
+public class Recipes {
 
 	@RequestMapping("/get")
 	public String getRecipes() throws Exception {

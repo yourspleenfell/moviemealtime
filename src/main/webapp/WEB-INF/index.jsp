@@ -15,11 +15,11 @@
 	<body>
 		<div class="navbar-fixed">
 			<nav>
-				<div class="nav-wrapper amber">
+				<div class="nav-wrapper grey darken-4">
 					<a href="#!" class="brand-logo">Movie Mealtime</a>
 			        <ul class="right hide-on-med-and-down">
-			        	<li><a class="waves-effect waves-light btn">Settings</a></li>
-			        	<li><a class="waves-effect waves-light btn">Logout</a></li>
+			        	<li><a href="#" class="btn waves-effect waves-red red accent-4">Settings</a></li>
+			        	<li><a href="#" class="btn waves-effect waves-red red accent-4">Logout</a></li>
 			        </ul>
 				</div>
 			</nav>
@@ -43,12 +43,12 @@
 				</div>
 			</div>
 			<div class="col s9 right">
-				<div class="col s12 yellow lighten-1 card-panel" id="movieDetails">
+				<div class="col s12 grey darken-1 card-panel white-text" id="movieDetails">
 				
 				</div>
 				<div class="col s12 green accent-2 card-panel" id="foods">
 					<div class="col s12">
-					<span class="card-title"><h4>Suggested Foods</h4></span>
+						<span class="card-title"><h4>Suggested Foods</h4></span>					
 					</div>
 					<div class="col s12" id="foodDetails">
 					
