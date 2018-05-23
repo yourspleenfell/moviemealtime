@@ -44,22 +44,15 @@
 			</div>
 			<div class="col s9 right">
 				<div class="col s12 yellow lighten-1 card-panel" id="movieDetails">
-					<p>Testing for test</p>
-					<p>Testing for test</p>
-					<p>Testing for test</p>
-					<p>Testing for test</p>
-					<p>Testing for test</p>
-					<p>Testing for test</p>
+				
 				</div>
-				<div class="col s12 green accent-2 card-panel" id="foodDetails">
-					<p>Testing for test</p>
-					<p>Testing for test</p>
-					<p>Testing for test</p>
-					<p>Testing for test</p>
-					<p>Testing for test</p>
-					<p>Testing for test</p>
-					<p>Testing for test</p>
-					<p>Testing for test</p>
+				<div class="col s12 green accent-2 card-panel" id="foods">
+					<div class="col s12">
+					<span class="card-title"><h4>Suggested Foods</h4></span>
+					</div>
+					<div class="col s12" id="foodDetails">
+					
+					</div>
 				</div>
 			</div>
 		</div>
