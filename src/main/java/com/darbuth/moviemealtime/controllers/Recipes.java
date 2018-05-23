@@ -5,7 +5,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import org.json.JSONObject;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,7 +12,7 @@ import com.google.gson.Gson;
 
 @RestController
 @RequestMapping("/recipes")
-public class RecipeController {
+public class Recipes {
 
 	@RequestMapping("/get")
 	public String getRecipes() throws Exception {
@@ -31,8 +30,6 @@ public class RecipeController {
 	     	response.append(inputLine);
 	    }
 	    in.close();
-	    String l = g.toJson(response.toString());
-	    return l;
-//	    JSONObject myResponse = new JSONObject(response.toString());
+	    return g.toJson(response.toString());
 	}
 }
