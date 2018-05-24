@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="/css/materialize.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+		
 		<script src="/js/scripts.js"></script>
 		<title>Movie Mealtime</title>
 	</head>
@@ -82,27 +83,7 @@
 			        <input type="text" id="username" name="username"/></p>
 			        
 			        <p><label for="password">Password</label>
-			        <input type="password" id="password" name="password"/></p>
-			        
-			        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-			        <input type="submit" value="Login!"/>
-		        
-		        </form>
-			</div>
-		</div>
-		<div id="mySetModal" class="modal">
-		    <div class="modal-content card-panel">
-		    <span id="setclose" class="close">&times;</span>
-			    <form method="POST" action="/useredit">
-			    	<c:if test="${errorMessage != null}">
-        			<c:out value="${errorMessage}"></c:out>
-    				</c:if>
-		       
-			        <p><label for="username">Email:</label>
-			        <input type="text" id="username" name="username"/></p>
-			        
-			        <p><label for="password">Password</label>
-			        <input type="password" id="password" name="password"/></p>
+			        <input type="password" id="logpassword" name="password"/></p>
 			        
 			        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 			        <input type="submit" value="Login!"/>
