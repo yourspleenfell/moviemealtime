@@ -42,16 +42,18 @@
 				
 				</div>
 			</div>
-			<div class="col s9 right">
-				<div class="col s12 grey darken-1 card-panel white-text" id="movieDetails">
-				
-				</div>
-				<div class="col s12 green accent-2 card-panel" id="foods">
-					<div class="col s12">
-						<span class="card-title"><h4>Suggested Foods</h4></span>					
-					</div>
-					<div class="col s12" id="foodDetails">
+			<div class="col s9">
+				<div class="col s12 " id="movieDetails">
 					
+				</div>
+				<div class="col s12" id="foods">
+					<div class="col s12">
+						<span class="card-title"><h4>Suggested Recipes</h4></span>					
+					</div>
+					<div class="col s12" >
+						<div class="container" id="foodDetails">
+						
+						</div>
 					</div>
 				</div>
 			</div>

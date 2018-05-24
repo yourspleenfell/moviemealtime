@@ -1,5 +1,8 @@
 $(document).ready(function(){
 	
+	$('#movieDetails').hide();
+	$('#foodDetails').hide();
+	
 	var slideRes = function(movie) {
 		var poster = "";
 		if (!movie.poster_path) {
@@ -56,25 +59,28 @@ $(document).ready(function(){
 				}
 			}
 			$('#movieDetails').html(`
-				<span class="card-title">
-				<h4>${movie.title}</h4>
-				<i>${movie.tagline}</i><br>
-				<div class="inline-div">
-					<img src="${poster}" class="poster-lg">
+				<div class="grey darken-1 card-panel white-text">
+					<span class="card-title">
+					<a class="btn-floating waves-effect waves-light amber right" id="showRecipes"><i class="material-icons">fastfood</i></a>
+					<h4>${movie.title}</h4>
+					<i>${movie.tagline}</i></span><br>
+					<div class="inline-div">
+						<img src="${poster}" class="poster-lg">
+					</div>
+					<div class="details">
+						<p><b>Genre(s):</b> ${genres}</p>
+						<p><b>Runtime:</b> ${movie.runtime} min</p>
+						<p><b>Release Date:</b> ${movie.release_date}</p>
+						<p><b>Average Rating:</b> ${movie.vote_average} / 10</p>
+						<p><b>Production Company:</b> ${movie.production_companies[0].name}</p>
+						<p><b>Overview:</b> ${movie.overview}</p>
+					</div>
 				</div>
-				<div class="details">
-					<p><b>Genre(s):</b> ${genres}</p>
-					<p><b>Runtime:</b> ${movie.runtime} min</p>
-					<p><b>Release Date:</b> ${movie.release_date}</p>
-					<p><b>Average Rating:</b> ${movie.vote_average} / 10</p>
-					<p><b>Production Company:</b> ${movie.production_companies[0].name}</p>
-					<p><b>Overview:</b> ${movie.overview}</p>
-				</div>
-			`)
+			`).slideDown();
 		});
 	});
 	
-	$('#foods').click(function() {
+	$('#foods').on('click', function() {
 		$.ajax({
 			url: "/recipes/get"
 		}).then(function(food) {
@@ -82,8 +88,49 @@ $(document).ready(function(){
 			var fj = JSON.parse(f);
 			console.log(fj);
 			$('#foodDetails').html(`
-				<p>${fj.meals[0].strMeal}</p>
-			`)
+				<div class="col m4">
+					<div class="card hoverable">
+						<div class="card-image waves-efect waves-block waves-light">
+							<img class="activator responsive-img" src="${fj.meals[0].strMealThumb}">
+						</div>
+						<div class="card-content">
+							<span class="card-title"></span>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title"></span>
+							<p></p>
+						</div>
+					</div>
+				</div>
+				<div class="col m4">
+					<div class="card hoverable">
+						<div class="card-image waves-efect waves-block waves-light">
+							<img class="activator responsive-img" src="${fj.meals[0].strMealThumb}">
+						</div>
+						<div class="card-content">
+							<span class="card-title"></span>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title"></span>
+							<p></p>
+						</div>
+					</div>
+				</div>
+				<div class="col m4">
+					<div class="card hoverable">
+						<div class="card-image waves-efect waves-block waves-light">
+							<img class="activator responsive-img" src="${fj.meals[0].strMealThumb}">
+						</div>
+						<div class="card-content">
+							<span class="card-title"></span>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title"></span>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			`).slideDown("fast");
 		});
 	});
 
