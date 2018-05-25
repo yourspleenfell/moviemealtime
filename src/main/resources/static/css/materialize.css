@@ -6204,9 +6204,9 @@ input[type=tel]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
 input[type=search]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
-  -webkit-box-shadow: 0 1px 0 0 #26a69a;
-          box-shadow: 0 1px 0 0 #26a69a;
+  border-bottom: 1px solid #ffc107;
+  -webkit-box-shadow: 0 1px 0 0 #ffc107;
+          box-shadow: 0 1px 0 0 #ffc107;
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -6222,7 +6222,7 @@ input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
 input[type=number]:not(.browser-default):focus:not([readonly]) + label,
 input[type=search]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #26a69a;
+  color: #ffc107;
 }
 
 input:not([type]):focus.valid ~ label,
@@ -6238,7 +6238,7 @@ input[type=tel]:not(.browser-default):focus.valid ~ label,
 input[type=number]:not(.browser-default):focus.valid ~ label,
 input[type=search]:not(.browser-default):focus.valid ~ label,
 textarea.materialize-textarea:focus.valid ~ label {
-  color: #4CAF50;
+  color: #ffc107;
 }
 
 input:not([type]):focus.invalid ~ label,
@@ -6254,7 +6254,7 @@ input[type=tel]:not(.browser-default):focus.invalid ~ label,
 input[type=number]:not(.browser-default):focus.invalid ~ label,
 input[type=search]:not(.browser-default):focus.invalid ~ label,
 textarea.materialize-textarea:focus.invalid ~ label {
-  color: #F44336;
+  color: #ffc107;
 }
 
 input:not([type]).validate + label,
@@ -6299,9 +6299,9 @@ input[type=search].valid:not(.browser-default),
 input[type=search].valid:not(.browser-default):focus,
 textarea.materialize-textarea.valid,
 textarea.materialize-textarea.valid:focus, .select-wrapper.valid > input.select-dropdown {
-  border-bottom: 1px solid #4CAF50;
-  -webkit-box-shadow: 0 1px 0 0 #4CAF50;
-          box-shadow: 0 1px 0 0 #4CAF50;
+  border-bottom: 1px solid #ffc107;
+  -webkit-box-shadow: 0 1px 0 0 #ffc107;
+          box-shadow: 0 1px 0 0 #ffc107;
 }
 
 input.invalid:not([type]), input.invalid:not([type]):focus,
@@ -6330,9 +6330,9 @@ input[type=search].invalid:not(.browser-default):focus,
 textarea.materialize-textarea.invalid,
 textarea.materialize-textarea.invalid:focus, .select-wrapper.invalid > input.select-dropdown,
 .select-wrapper.invalid > input.select-dropdown:focus {
-  border-bottom: 1px solid #F44336;
-  -webkit-box-shadow: 0 1px 0 0 #F44336;
-          box-shadow: 0 1px 0 0 #F44336;
+  border-bottom: 1px solid #ffc107;
+  -webkit-box-shadow: 0 1px 0 0 #ffc107;
+          box-shadow: 0 1px 0 0 #ffc107;
 }
 
 input:not([type]).valid ~ .helper-text[data-success],
@@ -6563,7 +6563,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 }
 
 .input-field .prefix.active {
-  color: #26a69a;
+  color: #ffc107;
 }
 
 .input-field .prefix ~ input,
@@ -9016,6 +9016,11 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
 
 .inline-div {
 	display: inline;
+}
+
+.logo-sm {
+	margin: 0 1em;
+	max-width: 50px;
 }
 
 .poster-sm {

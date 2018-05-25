@@ -7,14 +7,18 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import com.darbuth.moviemealtime.models.User;
+import com.darbuth.moviemealtime.services.UserService;
 
 @Component
 public class UserValidator implements Validator {
+	
+	private UserService us;
 
 	private static final String EMAIL_REGEX = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
 	private static Pattern pattern;
 	
-	public UserValidator() {
+	public UserValidator(UserService us) {
+		this.us = us;
 		pattern = Pattern.compile(EMAIL_REGEX, Pattern.CASE_INSENSITIVE);
 	}
 	
@@ -27,7 +31,7 @@ public class UserValidator implements Validator {
 	public void validate(Object object, Errors errors) {
 		User user = (User) object;
 		if (!user.getPasswordConfirmation().equals(user.getPassword())) {
-			errors.rejectValue("passwordConfirm", "Match");
+			errors.rejectValue("passwordConfirmation", "Match");
 		}
 		if (!pattern.matcher(user.getEmail()).matches()) {
 		errors.rejectValue("email", "Valid");
