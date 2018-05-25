@@ -1,5 +1,7 @@
 package com.darbuth.moviemealtime.services;
 
+import java.util.List;
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -38,6 +40,14 @@ public class UserService {
     // 3
     public User findUserByEmail(String email) {
         return userRepo.findByEmail(email);
+    }
+    
+    public List<User> findAllUsers() {
+    	return userRepo.findAll();
+    }
+    
+    public void updateUser(User user) {
+    	userRepo.save(user);
     }
 
 }
